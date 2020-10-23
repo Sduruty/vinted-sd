@@ -14,7 +14,7 @@ const { enc } = require("crypto-js"); //added with Brice's sent correction
 //***user sign up
 router.post("/user/signup", async (req, res) => {
   try {
-    const { email, username, phone, password, avatar } = req.fields;
+    const { email, username, phone, password } = req.fields;
     //*** email already in DB?
     const user = await User.findOne({ email: email });
     if (user) {
@@ -34,7 +34,6 @@ router.post("/user/signup", async (req, res) => {
           account: {
             username,
             phone,
-            avatar,
           },
           token,
           hash,
