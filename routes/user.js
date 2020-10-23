@@ -11,7 +11,6 @@ const User = require("../models/User");
 const Offer = require("../models/Offer");
 const { enc } = require("crypto-js"); //added with Brice's sent correction
 
-
 //***user sign up
 router.post("/user/signup", async (req, res) => {
   try {
