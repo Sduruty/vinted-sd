@@ -13,7 +13,7 @@ const User = mongoose.model("User", {
       type: String,
     },
     phone: String,
-    // avatar: Object,
+    avatar: Object,
   },
   token: String,
   hash: String,
