@@ -19,7 +19,7 @@ router.post("/user/signup", async (req, res) => {
     if (user) {
       //***if yes
       res.status(400).json({
-        message: "Provided email already has an account",
+        message: "Provided email already has an account.",
       });
     } else {
       if (email && username && password) {
