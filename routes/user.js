@@ -9,7 +9,6 @@ const cloudinary = require("cloudinary").v2;
 //***import models
 const User = require("../models/User");
 const Offer = require("../models/Offer");
-const { enc } = require("crypto-js"); //added with Brice's sent correction
 
 //***user sign up
 router.post("/user/signup", async (req, res) => {
@@ -72,6 +71,7 @@ router.post("/user/login", async (req, res) => {
       //***did user provided correct password ?
       const testHash = SHA256(password + user.salt).toString(encBase64);
       if (testHash === user.hash) {
+        //***if yes
         res.status(200).json({
           _id: user._id,
           token: user.token,

@@ -1,5 +1,3 @@
-//you are here : vinted/models/user
-
 const mongoose = require("mongoose");
 
 const User = mongoose.model("User", {
